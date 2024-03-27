@@ -23,3 +23,16 @@ form.addEventListener('submit', function(event) {
   // Redirect to the loading page
   window.location.href = 'loading.html';
 });
+const moodBtns = document.querySelectorAll('.mood-btn');
+
+moodBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const selectedMood = this.dataset.mood;
+    const storedUserData = JSON.parse(localStorage.getItem('userData')) || {};
+    storedUserData.mood = selectedMood;
+    localStorage.setItem('userData', JSON.stringify(storedUserData));
+
+    // Redirect to the next page or perform any other desired action
+    window.location.href = 'next-page.html';
+  });
+});
