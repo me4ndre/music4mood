@@ -8,12 +8,21 @@
 .text {
     font-family: monospace;
     color: red;
-    
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
-p {
-    color:red;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
-h1 {
-    color: red; 
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }
+
