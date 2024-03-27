@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="en">
 <head>
-	<meta charset = "UTF-8">
-	<meta http-equiv="X-UA-Compatible" content= "IE-edge">
-	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
-	<link rel= "stylesheet" href= "css/style.css">
-
-	<title> MAIN PAGE </title>
-	
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MAIN PAGE</title>
 </head>
-
 <body>
+  <div class="container">
+    <h1 class="text">Welcome to [music 4 mood]</h1>
 
-	<div class="container">
-	<h1 class="text"> Welcome to [music 4 mood] </h1>
-	</div>
-	<form action= "action_page.php">
-		<div>
-			<label for= "fname"> first name: </label>
-			<input type= "text" id="fname" name="fname" placeholder="">
-		</div>
-		<br>
+    <div class="info-text">
+      <p1 class="text1 delayed">first I need some information from you!</p1>
+    </div>
 
-		<div> 
-			<label for= "lname"> last name: </label>
-			<input type="text" id="lname" name="lname" placeholder="">
-		</div>
+  </div>
 
-		<div>
-			<input type= "submit">
-		</div>
+  <form id="myForm">
+  <div>
+    <label for="fname">first name:</label>
+    <input type="text" id="fname" name="fname" placeholder="ur mom">
+  </div>
+  <br>
+  <div>
+    <label for="lname">last name:</label>
+    <input type="text" id="lname" name="lname" placeholder="ur dad">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
+  <div id="swiper">
+    <div class="card"></div>
+  </div>
 
-	</form>
+  <script>
+    function showLoadingPage(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      window.location.href = 'loading.html'; // Redirect to the loading page
 
-	<div id= "swiper">
-		<div class= "card"></div>
-	</div>
+    }
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
